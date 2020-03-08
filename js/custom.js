@@ -225,9 +225,10 @@
 //=====================================================================================
 
  function factCounter() {
+  
     if($('.fact-counter').length){
-     $('.fact-counter .count.animated').each(function() {
-    
+      
+     $('.fact-counter .count').each(function() {      
       var $t = $(this),
        n = $t.find(".count-num").attr("data-stop"),
        r = parseInt($t.find(".count-num").attr("data-speed"), 10);
@@ -275,7 +276,7 @@
 
    // When document is Scrollig, do
  
- $(window).on('scroll', function() {
+ $(window).on('load', function() {
   factCounter();
  });
 
